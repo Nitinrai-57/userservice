@@ -31,7 +31,8 @@ public class AuthService {
     public ResponseEntity<UserDto> singUp(String email,String password){
         User user=new User();
         user.setEmail(email);
-        user.setPassword(password);
+
+
 //        user.setPassword(bCryptPasswordEncoder.encode(password));
         UserDto userDto=UserDto.from(user);
         userRepository.save(user);
